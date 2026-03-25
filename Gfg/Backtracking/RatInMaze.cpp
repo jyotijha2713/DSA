@@ -28,7 +28,7 @@ bool solveMazeUtil(int maze[][N], int x, int y, int sol[][N])
     return false;
 }
 int main()
-{
+{   
     int maze[N][N];
     cout<<"Enter the maze matrix: "<<endl;
     for(int i=0;i<N;i++){
@@ -37,12 +37,16 @@ int main()
         }
     }
     int sol[N][N]={0};
-    solveMazeUtil(maze,0,0,sol);
-    cout<<"The solution matrix is: "<<endl;
-    for(int i=0;i<N;i++){
-        for(int j=0;j<N;j++){
-            cout<<sol[i][j]<<" ";
+    if(solveMazeUtil(maze,0,0,sol)){
+        cout<<"The solution matrix is: "<<endl;
+        for(int i=0;i<N;i++){
+            for(int j=0;j<N;j++){
+                cout<<sol[i][j]<<" ";
+            }
+            cout<<endl;
         }
-        cout<<endl;
+    }
+    else{
+        cout<<"No possible path.";
     }
 }
