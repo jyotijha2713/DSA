@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+//Given a partially filled 9x9 2D array 'grid[9][9]', assign digits(from 1 to 9) to the empty calls so that every row, column, and subgrid of size 3x3 contains exactly one instance of the digits from 1 to 9.
 bool isSafe(int grid[9][9],int row, int col, int num)
 {
     //check if exists in the row
@@ -63,11 +64,22 @@ int main()
         {1,2,0,0,0,7,4,0,0},
         {0,4,9,2,0,6,0,0,7}
     };
-    SolveSudoku(grid);
-    for(int i=0;i<9;i++){
-        for(int j=0;j<9;j++){
-            cout<<grid[i][j]<<" ";
+    // cout<<"Enter the numbers present in the sudoku puzzle."<<endl;
+    // for(int i=0;i<9;i++){
+    //     for(int j=0;j<9;j++){
+    //         cin>>grid[i][j];
+    //     }
+    // }
+    if(SolveSudoku(grid)){
+        cout<<"Solution for the given sudoku exists."<<endl;
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
+                cout<<grid[i][j]<<" ";
+            }
+            cout<<endl;
         }
-        cout<<endl;
+    }
+    else{
+        cout<<"This sudoku cannot be solved.";
     }
 }

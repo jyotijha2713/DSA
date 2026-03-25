@@ -2,7 +2,8 @@
 #define N 4
 using namespace std;
 
-bool isSafe(int board[][4], int row, int col)
+//This is a problem of placing N queens on a (N x N) chessboard so that no two queens attacks each other. 
+bool isSafe(int board[][N], int row, int col)
 {
     // Check this row on left side
     for (int i = 0; i < col; i++)
@@ -22,7 +23,7 @@ bool isSafe(int board[][4], int row, int col)
     return true;
 
 }
-bool solveNQUtil(int board[][4],int col)
+bool solveNQUtil(int board[][N],int col)
 {
     if(col>=N)
         return true;
@@ -38,6 +39,12 @@ bool solveNQUtil(int board[][4],int col)
 }
 int main()
 {
-    int board[4][4]={0};
-    cout<<solveNQUtil(board,1);
+    int board[N][N]={0};
+    solveNQUtil(board,0);
+    for(int i=0;i<N;i++){
+        for(int j=0;j<N;j++){
+            cout<<board[i][j]<<" ";
+        }
+        cout<<endl;
+    }
 }

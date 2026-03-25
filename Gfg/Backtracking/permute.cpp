@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+//Given a string print all the permutations which do not contain "AB" as substring.
 bool isSafe(string str, int l, int i, int r)
 {
     if(l!=0 && str[l-1]=='A' && str[i]=='B')

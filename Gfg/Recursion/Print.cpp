@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+//print natural numbers from 1 to n using recursion
 void fun(int n)
 {
     if(n==0)return;
@@ -9,5 +10,8 @@ void fun(int n)
 }
 int main()
 {
-    fun(5);
+    int n;
+    cout<<"Enter a number: ";
+    cin>>n;
+    fun(n);
 }

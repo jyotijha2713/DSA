@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+//print the sum of all the digits in a given number using recursion.
 int fun(int n)
 {
     if(n<10)return n;
