@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+//find the factorial of a number using recursion.
 int fact(int n)
 {
     if(n==1) return 1;
@@ -9,5 +10,8 @@ int fact(int n)
 }
 int main()
 {
-    cout<<fact(4);
+    int n;
+    cout<<"Enter a number: ";
+    cin>>n;
+    cout<<"Factorial of "<<n<< " is " <<fact(n);
 }
